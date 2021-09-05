@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        h=["hung","ha"]
+        h.push("yeu hung nhieu lam");//push đem hàng này vào mảng
+        console.log(h);
+        h.push("still forever stay my side , my honey");
+        console.log(h);
+        h.splice(3,1);//xoa phan ms push still...vi bi thieu stay here by
+        console.log(h);
+        h.push("still forever stay here be my side, darling");//push lai cho dung
+        console.log(h);
+        ha=[{
+            id:1,//0
+            name:"hayeu",
+            nickname:"chiyeuminhhung",
+        },{
+            id:2,//1
+            name:"hungdeptrai",
+            nickname:"forever love you",
+        },{
+            id:3,//2
+            name:"thanh",
+            nickname:"yeuhathethoi",
+        },{
+            id:4,//3
+            name:"ngoc",
+            nickname:"quangngoc",
+            
+        }]
+        //xao id bat ky
+        for(i=0;i<ha.length;i++){
+            if(ha[i].id==3){//ghi so id can xoa
+                ha.splice(i,2);//i là vị trí bắt đầu xóa,2 là số id phải xóa 
+            }
+        }
+        console.log(ha);
+        // bây h hưng sẽ ghép hai mảng trên lại concat:
+        hayeu=h.concat(ha);
+        console.log(hayeu);
+        // bây h hưng sẽ 2 và 3 trong mảng hà yêu và thêm 2 và 3 vào chổ 1,0
+        hayeu.splice(2,2)//2 vị trí cần xóa 2 là số phần xóa 
+        console.log(hayeu);//kiểm tra nha
+        hanho=[{
+            id:1,//0
+            name:"hayeu",
+            nickname:"chiyeuminhhung",
+        },{
+            id:2,//1
+            name:"hungdeptrai",
+            nickname:"forever love you",
+        },{
+            id:3,//2
+            name:"thanh",
+            nickname:"yeuhathethoi",
+        },{
+            id:4,//3
+            name:"ngoc",
+            nickname:"quangngoc",
+            
+        }]
+        // luyện tập phần xóa id
+        for(j=0;j<hanho.length;j++){
+            if(hanho[j].id==2){
+                hanho.splice(i,1);//i tức là vị trí số 2,1 số phần tử phải xóa
+
+            }
+
+        }
+        console.log(hanho);
+        // indexOf lấy vị trí số try now:
+       his="codeglam";
+       g=his.indexOf("g");
+       console.log(g);
+       l=[1,2,3,4,5,6,7,9,0,10]
+       li=l.indexOf(0);
+       console.log(li);
+    </script>
+</body>
+</html>

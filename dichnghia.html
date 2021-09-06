@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <input type="text" id="n1" value="">
+        <input type="button" id="n2" onclick="nhoem();" value="dich_nghia">
+        <p id="1"></p>
+    </form>
+    <script>
+    english=["start","hello","yes","you","remember","hard to tell secret","the end"]
+     vietnam=["bắt đầu","xin chào","có","bạn","nhớ","lời khó nói","kết thúc"]
+function nhoem(){
+    n1=document.getElementById("n1").value;
+    console.log(n1);
+    h=english.indexOf(n1);
+    vietnams=vietnam[h];
+    document.getElementById("1").innerHTML=vietnams;
+}
+
+
+    </script>
+</body>
+</html>

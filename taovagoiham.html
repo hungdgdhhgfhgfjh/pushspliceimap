@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <br>
+    <input type="text" id="n1"  oninput="thuchien();" value="">
+         is <span id="n4"></span>
+    <br>
+    <p id="n2"></p>
+    <script>
+        function hung(a,b,c){
+            result= a+b-c;
+            document.write(result);
+            return result;
+        }
+        a=prompt('DIEN SO A VAO');
+        b=prompt('DIEN SO b VAO');
+        c=prompt('DIEN SO c VAO');
+        
+      h=hung(a,b,c);
+        document.write(h);
+        function ng(){
+            document.write("<br> nho nag");
+        }
+        ng();
+        function ngoc(number){
+            n=number*number;
+            return n;
+        }
+        n2=ngoc(2);
+        document.write("<br>"+n2);
+function thuchien(){
+    n1=document.getElementById("n1").value;
+    var result=ngoc(n1);
+    document.getElementById("n4").innerHTML=result;
+}
+
+        
+    
+    </script>
+</body>
+</html>

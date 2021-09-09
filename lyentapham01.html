@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <textarea name="" id="n1" value="" cols="30" rows="5"></textarea>
+  <input type="button" onclick="hung();">
+  <p id="n2"></p>
+  <script>
+      n1=document.getElementById("n1");
+      sao=["Polaris"," Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+      vn=["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","leo"];
+      function hung(){
+         n1=document.getElementById("n1").value;
+          h=sao.indexOf(n1);
+          k=vn[h];
+          document.getElementById("n2").innerHTML=k+" la chom sao tuong ung";
+          if(h==-1){
+            document.getElementById("n2").innerHTML="chom sao nay la khong co";
+          }
+      }
+  </script>
+</body>
+</html>

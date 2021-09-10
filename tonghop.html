@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>binh phuong</h1>
+    <input type="text" name="" id="n1" value="" oninput="hung();">
+    is<p id="n2"></p>
+    <br>
+    <h1>dien tich va chu vi</h1>
+    <input type="text"  name="" id="n3" value="" oninput="nho1()">
+    <input type="text"  name="" id="n4" value=""oninput="nho1()">
+    <p id="n5"></p>
+    <p id="n6"></p>
+    <br>
+    <h1>so nho nhat trong 3 so</h1>
+    <p id="n7"></p>
+    <br>
+    <h1>kiem tra so nguyen duong</h1>
+    <input type="text" value="" name="" id="n9"  oninput="n2()">
+    <p id="n8"></p>
+    <br>
+    <h1>kiem tra vi tri nam trong mang</h1>
+    <input type="text" value="" name="" id="n10" onclick="hauy();">
+    <p id="a1"></p>
+    <h1>kiem tra ki tu</h1>
+    <input type="text" id="a3" value="">
+    <input type="button" onclick="abc1();" >
+    <p id="a2"></p>
+    <script>
+      function nho(number){
+          var n=number*number;
+          return n;
+      }
+      function hung(){
+          n1=document.getElementById("n1").value;
+         var n=nho(n1);
+         document.getElementById("n2").innerHTML=n;
+      }
+     
+function nho1(){
+      a=document.getElementById("n3").value;
+      b=document.getElementById("n4").value;
+var p=a*b;
+var c=(a+b)*2
+document.getElementById("n5").innerHTML=p+"m^2";
+document.getElementById("n6").innerHTML=c+"m";
+}
+function nhung(){
+    i=prompt("enter vao day");
+    k=prompt("enter vao day");
+    l=prompt("enter vao day");
+    if(i<k&&i<l){
+        document.getElementById("n7").innerHTML=i+"la so nho nhat"
+    }else if(k<i&&k<l){
+        document.getElementById("n7").innerHTML=k+"la so nho nhat"
+    }else{
+        document.getElementById("n7").innerHTML=l+"la so nho nhat"
+    }
+}
+nhung();
+function n2(){
+n5=document.getElementById("n9").value;
+n5=parseInt(n5);
+if(n5>0){
+    document.getElementById("n8").innerHTML=n5 + " la so nguyen duong";
+}else{
+    document.getElementById("n8").innerHTML=n5 + " khong phai la so nguyen duong";
+}
+}
+hinh=["1","nho em","1","2","3","4","5","6","7","yeu em"];
+function hauy(){
+n10=document.getElementById("n10").value;
+hasd=hinh.indexOf(n10);
+if(hasd<0){
+    document.getElementById("a1").innerHTML= "vi tri "+hasd+ " cua mang" +"<br>"+hinh;
+   
+}else{
+    document.getElementById("a1").innerHTML="vi tri "  +hasd+ " vi tri nam trong mang"+"<br>"+hinh;
+    
+}
+
+}
+function abc1(){
+    a3=document.getElementById("a3").value;
+    console.log(typeof a3);
+    if(typeof Number(a3)=="number"){
+        document.getElementById("a2").innerHTML="đây là số";
+    }else if(typeof a3=="string"){
+        document.getElementById("a2").innerHTML="đây là chu";
+    }else if(typeof a3=="boolean"){
+        document.getElementById("a2").innerHTML="đây là boolean";
+}
+}
+    </script>
+</body>
+</html>

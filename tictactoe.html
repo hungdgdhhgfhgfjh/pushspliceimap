@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <table align="center">
+        <tr>
+  <td> <button onclick="clickhere(this);"></button></td>
+  <td> <button onclick="clickhere(this);"></button></td>
+  <td> <button onclick="clickhere(this);"></button></td>
+</tr>
+<tr>
+    <td> <button onclick="clickhere(this);"></button></td>
+    <td> <button onclick="clickhere(this);"></button></td>
+    <td> <button onclick="clickhere(this);"></button></td>
+  </tr>
+  <tr>
+    <td> <button onclick="clickhere(this);"></button></td>
+    <td> <button onclick="clickhere(this);"></button></td>
+    <td> <button onclick="clickhere(this);"></button></td>
+  </tr>
+    
+</table>
+</body>
+<script>
+    flag=1;
+    count=0;
+
+    function clickhere(x){
+        console.log(flag);
+        console.log(count);
+        if(flag==1){
+            x.style.backgroundColor="red";
+            x.style.color="yellow";
+            x.innerText="X";
+        }else{
+            x.style.backgroundColor="green";
+            x.style.color="white";
+            x.innerText="O";
+        }
+        x.setAttribute("disabled" , "true");
+        flag=!flag;
+        count++;
+        if(count==9){
+            alert("game over");
+            location.reload();
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" value="" id="n1" />
+<input type="button" value="FsangM" onclick="hung();"/>
+<input type="button" value="MsangF" onclick="h();"/>
+<p id="n2"></p>
+<p id="n3"></p>
+<script>
+    function hung(){
+        F=document.getElementById("n1").value;
+        M = 0.305 * F;
+        document.getElementById("n2").innerHTML=" M = 0.305 * F "+ " = " +M+" meter"
+    }
+    function h(){
+        M=document.getElementById("n1").value
+        F = 3.279 * M ;
+        document.getElementById("n3").innerHTML= " F = 3.279 * M " +" = "+M+" foot"
+    }
+</script>
+</body>
+</html>
